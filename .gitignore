@@ -1,0 +1,8 @@
+node_modules
+/dist
+assets.zip
+schemas.zip
+.env
+.env.local
+open.bat
+

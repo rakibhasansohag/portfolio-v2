@@ -1,0 +1,169 @@
+$phoneWidth: 22em;
+$phoneHeight: 40em;
+$borderRadius: 2em;
+
+#phone {
+	background: #000000;
+	width: $phoneWidth;
+	height: $phoneHeight;
+	border-radius: $borderRadius;
+	display: flex;
+	flex-direction: column;
+	padding: 1em;
+	box-shadow: 0 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.2);
+
+	.inner-skin {
+		flex-grow: 10;
+		background-color: #eaeaff;
+		border-radius: $borderRadius / 2;
+		padding: 1.5em;
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			width: $phoneWidth / 2;
+			height: 1em;
+			border-radius: 1em;
+			background-color: #000000;
+			top: -0.5em;
+			left: $phoneWidth / 5;
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			width: $phoneWidth / 3;
+			height: 0.5em;
+			border-radius: 1em;
+			background-color: #000000;
+			bottom: 0.25em;
+			left: ($phoneWidth - ($phoneWidth / 3)) / 2.3;
+		}
+
+		.phone-content {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			.title {
+				font-size: 3em;
+				font-weight: bold;
+				margin-bottom: 0;
+				position: relative;
+
+				&:after {
+					position: absolute;
+					content: '';
+					background-color: var(--secondary-color);
+					height: 0.15em;
+					width: 50%;
+					top: 1.1em;
+					left: 0;
+				}
+			}
+
+			.title,
+			.subtitle {
+				color: #000000;
+				font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+					Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+			}
+		}
+
+		img {
+			width: 80%;
+		}
+
+		.phone-top {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 10px;
+			position: absolute;
+			top: -9px;
+
+			.phone-icons {
+				display: flex;
+				align-items: center;
+
+				.phone-icon,
+				.envelope-icon {
+					font-size: 16px;
+					margin-right: 10px;
+					color: #333;
+					cursor: pointer;
+
+					&:hover {
+						color: #2b44ff;
+					}
+				}
+			}
+
+			&.phone-left {
+				left: 10px;
+			}
+
+			&.phone-right {
+				position: absolute;
+				top: -9px;
+				right: 0;
+			}
+		}
+	}
+}
+
+.overlay {
+	position: relative;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+
+	.chatbot {
+		position: fixed;
+		right: -32em;
+
+		&.isActive {
+			right: 0;
+		}
+	}
+}
+
+.bounce {
+	animation-name: bounce;
+	animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+
+// @media only screen and (max-width: 768px) {
+// 	.chatbot {
+// 		width: 100%;
+// 		display: bloc;
+// 		height: 100px;
+// 	}
+// }
+
+@keyframes bounce {
+	0% {
+		transform: scale(1, 1) translateY(0);
+	}
+	10% {
+		transform: scale(1.1, 0.9) translateY(0);
+	}
+	30% {
+		transform: scale(0.9, 1.1) translateY(-4em);
+	}
+	50% {
+		transform: scale(1.05, 0.95) translateY(0);
+	}
+	57% {
+		transform: scale(1, 1) translateY(-7px);
+	}
+	64% {
+		transform: scale(1, 1) translateY(0);
+	}
+	100% {
+		transform: scale(1, 1) translateY(0);
+	}
+}
