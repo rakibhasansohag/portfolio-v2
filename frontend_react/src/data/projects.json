@@ -2,80 +2,130 @@
 	{
 		"id": "p1",
 		"title": "Garden Huh",
-		"short": "Next-level Garden Huh with modern UI, animations and deploy ready.",
+		"short": "Next-level gardening hub with modern UI, animations, and a full-stack setup ready for deployment.",
 		"images": [
 			"https://res.cloudinary.com/rakibhasan/image/upload/v1755006679/garden_hub_website_hero_gr95p6.png",
 			"https://res.cloudinary.com/rakibhasan/image/upload/v1755007425/garden_hub_website_tips_s89i1e.png"
 		],
-		"github": "https://github.com/rakibhasansohag/portfolio-v3",
-		"live": "https://your-portfolio.example",
-		"stack": ["Next.js", "React", "Tailwind CSS", "framer-motion"],
-		"challenges": [
-			"Migrating from CRA + SCSS to Next.js app router.",
-			"Keeping animations smooth while improving SEO."
+		"github": "https://github.com/rakibhasansohag/Garden-hub",
+		"live": "https://garden-hub-by-rakib.netlify.app/",
+		"stack": [
+			"MERN",
+			"React",
+			"Tailwind CSS",
+			"Framer Motion",
+			"Firebase",
+			"Express.js",
+			"MongoDB"
 		],
-		"solution": "Rewrote sections one-by-one, used server components for static content and framer-motion for minimal DOM animations.",
+		"challenges": [
+			"Migrating from CRA + SCSS to the Next.js App Router for improved performance and SEO.",
+			"Maintaining smooth animations while integrating server-side rendering.",
+			"Creating a secure, scalable backend for handling user authentication and community features."
+		],
+		"solution": "Rebuilt the frontend in Next.js using server components for static pages and Framer Motion for subtle, performant animations. Designed the backend with Express.js and MongoDB for a flexible API layer, integrated Firebase for authentication and hosting, and optimized client-server communication for real-time updates.",
 		"longDescription": [
-			"This project was a complete rebuild of my personal portfolio. The goal was to improve SEO, performance and add modern animations while keeping a small bundle size.",
-			"Highlights include server-side rendering for SEO-critical pages, optimized image loading, and a modular component system using shadcn/ui. I also rewrote the hero and project sections with framer-motion for subtle staggered animations.",
-			"Future work: integrate CMS to manage projects, add internationalization, and write automated visual tests."
+			"Garden Huh is a full-stack gardening platform designed to bring together gardening enthusiasts, plant experts, and hobbyists in a vibrant online space. It offers curated plant care guides, seasonal tips, and an interactive community forum where users can share experiences, ask questions, and get expert advice.",
+			"The project uses Next.js for fast, SEO-friendly rendering and a responsive Tailwind CSS layout with Framer Motion animations for smooth transitions. On the backend, Express.js and MongoDB power secure API endpoints for managing user profiles, posts, and comments. Firebase handles authentication and file storage for images, while the Swiper library creates a rich, mobile-friendly carousel experience.",
+			"Users can browse categorized plant guides, bookmark favorite tips, and interact in real time with other members. The platform’s modular architecture and clean UI make it easy to expand with new features such as plant disease diagnosis, event scheduling, and marketplace integration in future updates."
 		]
 	},
+
 	{
 		"id": "p2",
-		"title": "home Horizon",
-		"short": "A lightweight home Horizon with filters, drag & drop and local persistence.",
+		"title": "Home Horizon",
+		"short": "Full-stack MERN real estate app with advanced search, map integration, and smooth UI animations.",
 		"images": [
 			"https://res.cloudinary.com/rakibhasan/image/upload/v1755006679/marathon_website_hero_wp8gjc.png",
 			"https://res.cloudinary.com/rakibhasan/image/upload/v1755007425/home_horizon_website_manageProperties_hetgus.png"
 		],
-		"github": "https://github.com/rakibhasansohag/task-manager",
-		"live": "https://task-manager.example",
-		"stack": ["React", "localStorage", "framer-motion"],
-		"challenges": ["State sync with drag/drop", "Responsive grid layout"],
-		"solution": "Used controlled state + indexes for DnD and CSS grid with auto-fit for responsiveness.",
+		"github": "https://github.com/rakibhasansohag/home-horizon",
+		"live": "https://homehorizon-by-rakib.netlify.app/",
+		"stack": [
+			"MERN",
+			"React",
+			"Tailwind CSS",
+			"ShadCN UI",
+			"Framer Motion",
+			"Leaflet",
+			"Firebase Auth",
+			"Stripe (payments)",
+			"Cloudinary"
+		],
+		"challenges": [
+			"Implementing real-time map rendering with Leaflet",
+			"Integrating Firebase authentication & role-based access",
+			"Secure property image uploads with Cloudinary",
+			"Responsive design for property cards and detail pages",
+			"Seamless Stripe checkout flow"
+		],
+		"solution": "Leveraged React Query for data fetching, Leaflet for interactive maps, Firebase for authentication, and Cloudinary for optimized image handling. Applied responsive CSS grid and Framer Motion for smooth UI transitions.",
 		"longDescription": [
-			"This project was a complete rebuild of my personal portfolio. The goal was to improve SEO, performance and add modern animations while keeping a small bundle size.",
-			"Highlights include server-side rendering for SEO-critical pages, optimized image loading, and a modular component system using shadcn/ui. I also rewrote the hero and project sections with framer-motion for subtle staggered animations.",
-			"Future work: integrate CMS to manage projects, add internationalization, and write automated visual tests."
+			"Home Horizon is a feature-rich full-stack MERN real estate platform that streamlines property discovery, listing management, and secure transactions. Users can search and filter properties by location, price, and features, with an interactive map powered by Leaflet for visual exploration. Property owners can create, edit, and manage listings with images uploaded securely to Cloudinary, while buyers enjoy a smooth booking and payment process through Stripe integration. The platform uses Firebase for authentication, supporting both standard users and admin roles with role-based access control. Built with React, Tailwind CSS, and ShadCN UI, it delivers a responsive, mobile-friendly experience enhanced by Framer Motion animations. React Query handles efficient server-state synchronization, ensuring fast and reliable data updates. This combination of modern design, intuitive UX, and robust backend functionality makes Home Horizon a complete end-to-end solution for the real estate market."
 		]
 	},
+
 	{
 		"id": "p3",
 		"title": "Marathon HUB",
-		"short": "Fake Event: Event list, Event details, and checkout mock.",
+		"short": "Full-stack platform for marathon events with registration, dashboards, and simulated checkout.",
 		"images": [
 			"https://res.cloudinary.com/rakibhasan/image/upload/v1755006678/home_horizon_website_hero_y9gnsg.png",
 			"https://res.cloudinary.com/rakibhasan/image/upload/v1755007426/marathon_website_dashboard_wdap8a.png"
 		],
-		"github": "https://github.com/rakibhasansohag/ecommerce-mock",
-		"live": "https://ecommerce.example",
-		"stack": ["React", "Stripe (demo)", "Tailwind"],
-		"challenges": ["Fake checkout flow", "Image performance"],
-		"solution": "Optimized images, lazy load them and simulated checkout flows with local guard rails.",
+		"github": "https://github.com/rakibhasansohag/marathon-hub",
+		"live": "https://marathon-managment-by-rakib.netlify.app/",
+		"stack": [
+			"React",
+			"Node.js",
+			"Express",
+			"MongoDB",
+			"Stripe (demo)",
+			"Tailwind CSS",
+			"Framer Motion"
+		],
+		"challenges": [
+			"Implementing a realistic but safe checkout flow without actual payments",
+			"Ensuring responsive layout across event list, dashboard, and detail views",
+			"Optimizing dashboard performance with multiple event images and dynamic data"
+		],
+		"solution": "Built a demo payment flow using Stripe test mode, added local validation guards to prevent invalid checkouts, implemented responsive flex/grid layouts for all screen sizes, and used lazy-loading with image compression for faster load times.",
 		"longDescription": [
-			"This project was a complete rebuild of my personal portfolio. The goal was to improve SEO, performance and add modern animations while keeping a small bundle size.",
-			"Highlights include server-side rendering for SEO-critical pages, optimized image loading, and a modular component system using shadcn/ui. I also rewrote the hero and project sections with framer-motion for subtle staggered animations.",
-			"Future work: integrate CMS to manage projects, add internationalization, and write automated visual tests."
+			"Marathon HUB is a simulated full-stack event management platform designed for marathon enthusiasts. It allows users to browse upcoming marathons, view detailed event information, register for races, and manage their participation through a personal dashboard. Organizers can create events with images, dates, and descriptions, while participants can complete a mock checkout process using Stripe's test environment. The system is built with React for the frontend, Node.js and Express for the backend, and MongoDB for storing event and registration data. Tailwind CSS ensures a clean, responsive design, while Framer Motion provides smooth animations for transitions and hover effects. The app demonstrates event CRUD operations, secure route handling, and performance optimizations including lazy-loaded images and minimized network requests. Perfect as a portfolio project, it showcases both frontend polish and backend logic in an event-focused context."
 		]
 	},
+
 	{
 		"id": "p4",
-		"title": "movie JOSS",
-		"short": "Real-time UI demo with Movie list and optimistic UI updates.",
+		"title": "Movie JOSS",
+		"short": "A feature-rich movie, K-drama, and TV series explorer with real-time updates and immersive UI.",
 		"images": [
 			"https://res.cloudinary.com/rakibhasan/image/upload/v1755006678/movieX_wbesite_hero_xjfhwv.png",
 			"https://res.cloudinary.com/rakibhasan/image/upload/v1755007427/movieX_wbesite_movie_details_dmns7a.png"
 		],
-		"github": "https://github.com/rakibhasansohag/chat-ui",
-		"live": "https://chat-ui.example",
-		"stack": ["Socket.IO", "React", "framer-motion"],
-		"challenges": ["Latency simulation", "Scrolling & focus management"],
-		"solution": "Used optimistic updates, smooth auto-scroll and focus management for chat input.",
+		"github": "https://github.com/rakibhasansohag/MovieX",
+		"live": "https://moviejoss.netlify.app/",
+		"stack": [
+			"React",
+			"Redux Toolkit",
+			"Axios",
+			"Framer Motion",
+			"SASS",
+			"Day.js",
+			"React Infinite Scroll",
+			"React Player"
+		],
+		"challenges": [
+			"Handling large API responses while maintaining fast UI performance",
+			"Implementing infinite scrolling with smooth loading states",
+			"Ensuring responsive, consistent layouts across movie, drama, and TV series pages",
+			"Providing real-time search and filtering without overwhelming the API"
+		],
+		"solution": "Optimized API requests with debouncing and conditional fetching, implemented infinite scroll with lazy-loading for images, used Redux Toolkit for state management, and applied Framer Motion for smooth content transitions. Applied modular SCSS for fine-tuned styling and responsive breakpoints.",
 		"longDescription": [
-			"This project was a complete rebuild of my personal portfolio. The goal was to improve SEO, performance and add modern animations while keeping a small bundle size.",
-			"Highlights include server-side rendering for SEO-critical pages, optimized image loading, and a modular component system using shadcn/ui. I also rewrote the hero and project sections with framer-motion for subtle staggered animations.",
-			"Future work: integrate CMS to manage projects, add internationalization, and write automated visual tests."
+			"Movie JOSS is a modern entertainment discovery platform that lets users explore movies, K-dramas, and TV series with detailed information, trailers, and real-time search. The app provides genre-based browsing, trending lists, and detailed pages featuring ratings, release dates, cast info, and embedded trailers.",
+			"It uses Redux Toolkit to manage state efficiently across different sections, Axios for optimized API calls, and React Infinite Scroll to create a seamless browsing experience without page reloads. Framer Motion enhances the UI with smooth animations for cards, modals, and navigation changes, while SCSS ensures maintainable, scalable styling.",
+			"Additional features include a responsive layout for mobile and desktop, lazy-loaded images for performance, a real-time search bar with debounce for instant feedback, and integrated video playback using React Player. The result is a fluid, highly interactive media browsing experience that feels like a professional streaming service demo."
 		]
 	}
 ]
