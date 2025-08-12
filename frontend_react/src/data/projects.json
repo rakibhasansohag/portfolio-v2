@@ -1,0 +1,69 @@
+[
+	{
+		"id": "p1",
+		"title": "Garden Huh",
+		"short": "Next-level Garden Huh with modern UI, animations and deploy ready.",
+		"image": "https://res.cloudinary.com/rakibhasan/image/upload/v1755006679/garden_hub_website_hero_gr95p6.png",
+		"github": "https://github.com/rakibhasansohag/portfolio-v3",
+		"live": "https://your-portfolio.example",
+		"stack": ["Next.js", "React", "Tailwind CSS", "framer-motion"],
+		"challenges": [
+			"Migrating from CRA + SCSS to Next.js app router.",
+			"Keeping animations smooth while improving SEO."
+		],
+		"solution": "Rewrote sections one-by-one, used server components for static content and framer-motion for minimal DOM animations.",
+		"longDescription": [
+			"This project was a complete rebuild of my personal portfolio. The goal was to improve SEO, performance and add modern animations while keeping a small bundle size.",
+			"Highlights include server-side rendering for SEO-critical pages, optimized image loading, and a modular component system using shadcn/ui. I also rewrote the hero and project sections with framer-motion for subtle staggered animations.",
+			"Future work: integrate CMS to manage projects, add internationalization, and write automated visual tests."
+		]
+	},
+	{
+		"id": "p2",
+		"title": "home Horizon",
+		"short": "A lightweight home Horizon with filters, drag & drop and local persistence.",
+		"image": "https://res.cloudinary.com/rakibhasan/image/upload/v1755006679/marathon_website_hero_wp8gjc.png",
+		"github": "https://github.com/rakibhasansohag/task-manager",
+		"live": "https://task-manager.example",
+		"stack": ["React", "localStorage", "framer-motion"],
+		"challenges": ["State sync with drag/drop", "Responsive grid layout"],
+		"solution": "Used controlled state + indexes for DnD and CSS grid with auto-fit for responsiveness.",
+		"longDescription": [
+			"This project was a complete rebuild of my personal portfolio. The goal was to improve SEO, performance and add modern animations while keeping a small bundle size.",
+			"Highlights include server-side rendering for SEO-critical pages, optimized image loading, and a modular component system using shadcn/ui. I also rewrote the hero and project sections with framer-motion for subtle staggered animations.",
+			"Future work: integrate CMS to manage projects, add internationalization, and write automated visual tests."
+		]
+	},
+	{
+		"id": "p3",
+		"title": "Marathon HUB",
+		"short": "Fake Event: Event list, Event details, and checkout mock.",
+		"image": "https://res.cloudinary.com/rakibhasan/image/upload/v1755006678/home_horizon_website_hero_y9gnsg.png",
+		"github": "https://github.com/rakibhasansohag/ecommerce-mock",
+		"live": "https://ecommerce.example",
+		"stack": ["React", "Stripe (demo)", "Tailwind"],
+		"challenges": ["Fake checkout flow", "Image performance"],
+		"solution": "Optimized images, lazy load them and simulated checkout flows with local guard rails.",
+		"longDescription": [
+			"This project was a complete rebuild of my personal portfolio. The goal was to improve SEO, performance and add modern animations while keeping a small bundle size.",
+			"Highlights include server-side rendering for SEO-critical pages, optimized image loading, and a modular component system using shadcn/ui. I also rewrote the hero and project sections with framer-motion for subtle staggered animations.",
+			"Future work: integrate CMS to manage projects, add internationalization, and write automated visual tests."
+		]
+	},
+	{
+		"id": "p4",
+		"title": "movie JOSS",
+		"short": "Real-time UI demo with Movie list and optimistic UI updates.",
+		"image": "https://res.cloudinary.com/rakibhasan/image/upload/v1755006678/movieX_wbesite_hero_xjfhwv.png",
+		"github": "https://github.com/rakibhasansohag/chat-ui",
+		"live": "https://chat-ui.example",
+		"stack": ["Socket.IO", "React", "framer-motion"],
+		"challenges": ["Latency simulation", "Scrolling & focus management"],
+		"solution": "Used optimistic updates, smooth auto-scroll and focus management for chat input.",
+		"longDescription": [
+			"This project was a complete rebuild of my personal portfolio. The goal was to improve SEO, performance and add modern animations while keeping a small bundle size.",
+			"Highlights include server-side rendering for SEO-critical pages, optimized image loading, and a modular component system using shadcn/ui. I also rewrote the hero and project sections with framer-motion for subtle staggered animations.",
+			"Future work: integrate CMS to manage projects, add internationalization, and write automated visual tests."
+		]
+	}
+]
