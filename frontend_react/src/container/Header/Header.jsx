@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import './Header.scss';
+
 import AppWrap from '../../wrapper/AppWrap';
 
 import { renderCanvas } from './renderCanvas';
 import { Phone } from './Phone';
+import AnimatedWord from '../../components/AnimatedWord';
 
 const scaleVariants = {
 	whileInView: {
@@ -17,7 +19,11 @@ const scaleVariants = {
 	},
 };
 
-const words = ['Front-End Developer', 'Back-End Developer', 'Problem Solver'];
+const words = [
+	{ text: 'Front-End Developer', color: '#068FFF' },
+	{ text: 'Back-End Developer', color: '#8E1616' }, // al right
+	{ text: 'Problem Solver', color: '#123458' },
+];
 
 const Header = () => {
 	const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -36,11 +42,6 @@ const Header = () => {
 		renderCanvas();
 	}, []);
 
-	const wordColors = words.map((_, index) =>
-		index === currentWordIndex
-			? `hsl(${(360 / words.length) * index}, 70%, 50%)`
-			: 'black',
-	);
 	return (
 		<div className='app__header app__flex'>
 			<motion.div
@@ -64,26 +65,10 @@ const Header = () => {
 				<h2> Rakib Hasan Sohag </h2>
 				<p>
 					A highly skilled{' '}
-					<motion.span>
-						{/* Non-animated span for other words (i don't know something will updated ) */}
-					</motion.span>
-					{words.map((word, index) => (
-						<motion.span
-							key={index}
-							animate={{ color: wordColors[index] }}
-							transition={{
-								duration: 1.5,
-								repeat: Infinity,
-								repeatType: 'loop',
-								delay: 0,
-							}}
-							style={{
-								display: index === currentWordIndex ? 'inline' : 'none',
-							}}
-						>
-							{word}
-						</motion.span>
-					))}
+					<AnimatedWord
+						text={words[currentWordIndex].text}
+						color={words[currentWordIndex].color}
+					/>
 					.
 				</p>
 			</motion.div>
