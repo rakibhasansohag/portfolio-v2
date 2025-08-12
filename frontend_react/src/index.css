@@ -3,11 +3,16 @@
 :root {
 	--font-base: 'DM Sans', sans-serif;
 
-	--primary-color: #edf2f8;
-	--secondary-color: #313bac;
-	--black-color: #030303;
-	--lightGray-color: #e4e4e4;
-	--gray-color: #6b7688;
+	/* Main Colors */
+	--primary-background-color: #edf2f8;
+	--secondary-accent-color: #313bac;
+
+	/* Text & Gray Scale */
+	--text-color: #030303;
+	--text-color-secondary: #6b7688;
+	--text-color-light: #e4e4e4;
+
+	/* Other utility colors */
 	--brown-color: #46364a;
 	--white-color: #ffffff;
 }
