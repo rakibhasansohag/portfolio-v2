@@ -65,6 +65,7 @@ const ProjectModal = ({ project, onClose }) => {
 					<div className='modal-content'>
 						<div className='modal-left'>
 							<img src={project.image} alt={project.title} />
+							<img src={project.image2} alt={project.title} />
 						</div>
 
 						<div className='modal-right'>

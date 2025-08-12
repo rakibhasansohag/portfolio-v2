@@ -26,7 +26,7 @@ const SocialMedia = () => {
 			</div>
 			<div>
 				<a
-					href='https://github.com/devoloper-rakib'
+					href='https://github.com/rakibhasansohag'
 					target='_blank'
 					rel='noreferrer'
 				>
