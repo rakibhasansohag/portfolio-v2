@@ -23,7 +23,7 @@ const ProjectCard = ({ project, onDetails }) => {
 			whileHover={{ scale: 1.03 }}
 		>
 			<div className='project-image'>
-				<img src={project.image} alt={project.title} />
+				<img src={project.images?.[0]} alt={project.title} />
 			</div>
 
 			<div className='project-body'>

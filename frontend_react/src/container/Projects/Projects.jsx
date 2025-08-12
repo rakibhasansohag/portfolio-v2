@@ -20,7 +20,7 @@ function Projects() {
 	return (
 		<section className='projects-section'>
 			<h2 className='head-text mb'>
-				MY Creative <span>Work</span> Station<span>.</span>
+				MY Creative <span>Project</span> Station<span>.</span>
 			</h2>
 
 			<div className='projects-grid '>

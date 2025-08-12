@@ -64,8 +64,16 @@ const ProjectModal = ({ project, onClose }) => {
 
 					<div className='modal-content'>
 						<div className='modal-left'>
-							<img src={project.image} alt={project.title} />
-							<img src={project.image2} alt={project.title} />
+							<img
+								src={project.images?.[0]}
+								alt={project.title}
+								loading='lazy'
+							/>
+							<img
+								src={project.images?.[1]}
+								alt={project.title}
+								loading='lazy'
+							/>
 						</div>
 
 						<div className='modal-right'>
