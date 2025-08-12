@@ -134,6 +134,13 @@
         background: transparent;
         color: #222;
       }
+
+      @media (max-width: 400px) {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap:1.5rem
+      }
     }
   }
 }

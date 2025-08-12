@@ -47,7 +47,7 @@ const ProjectCard = ({ project, onDetails }) => {
 					>
 						<FiExternalLink /> Live
 					</a>
-					<button className='btn primary' onClick={onDetails}>
+					<button className='btn primary ' onClick={onDetails}>
 						<FiInfo /> Details
 					</button>
 				</div>
