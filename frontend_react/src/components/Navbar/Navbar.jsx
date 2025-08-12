@@ -27,6 +27,15 @@ const Navbar = () => {
 						))}
 					</ul>
 
+					<motion.a
+						href='https://drive.google.com/file/d/1oULu37JYveYo4nl5Fldid0TKwW4TsWPr/view?usp=drive_link'
+						target='_blank'
+						rel='noopener noreferrer'
+						className='resume-btn desktop-only'
+					>
+						View Resume
+					</motion.a>
+
 					<div className='app__navbar-menu'>
 						<HiMenuAlt4 onClick={() => setToggle(true)} />
 
@@ -38,15 +47,27 @@ const Navbar = () => {
 								<HiX onClick={() => setToggle(false)} />
 
 								<ul>
-									{['home', 'about', 'work', 'skills', 'contact'].map(
+									{['home', 'about', 'projects', 'skills', 'contact'].map(
 										(item) => (
-											<li key={`${item}`}>
+											<li key={item}>
 												<a href={`#${item}`} onClick={() => setToggle(false)}>
 													{item}
 												</a>
 											</li>
 										),
 									)}
+
+									<li style={{ marginTop: 'auto', width: '100%' }}>
+										<a
+											href='https://drive.google.com/file/d/1oULu37JYveYo4nl5Fldid0TKwW4TsWPr/view?usp=drive_link'
+											target='_blank'
+											rel='noopener noreferrer'
+											className='resume-mobile resume-btn'
+											onClick={() => setToggle(false)}
+										>
+											View Resume
+										</a>
+									</li>
 								</ul>
 							</motion.div>
 						)}

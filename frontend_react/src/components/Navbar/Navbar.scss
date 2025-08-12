@@ -183,3 +183,49 @@
 		display: none;
 	}
 }
+
+.resume-btn {
+  display: inline-block;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #4F46E5;
+  color: white !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px 0 rgba(79, 70, 229, 0.3);
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+
+  &:hover {
+    transform: scale(1.05);
+    background-color: #4338CA;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+@media (max-width: 900px) {
+  .resume-btn.desktop-only {
+    display: none !important;
+  }
+}
+
+@media (min-width: 900px) {
+  .resume-mobile {
+    display: none;
+  }
+}
+
+.app__navbar-menu div ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  padding-bottom: 2rem; 
+}
+

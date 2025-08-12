@@ -71,15 +71,6 @@ const Header = () => {
 					/>
 					.
 				</p>
-
-				<motion.a
-					href='https://drive.google.com/file/d/1oULu37JYveYo4nl5Fldid0TKwW4TsWPr/view?usp=drive_link'
-					target='_blank'
-					rel='noopener noreferrer'
-					className='resume-btn'
-				>
-					View Resume
-				</motion.a>
 			</motion.div>
 
 			<motion.div
