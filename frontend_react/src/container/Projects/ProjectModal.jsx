@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FiX, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import useIsMobile from '../../hooks/useIsMobile';
 
-import './Projects.scss';
+
 
 const overlayVariant = { hidden: { opacity: 0 }, visible: { opacity: 1 } };
 const modalVariant = {
@@ -47,33 +47,22 @@ const ProjectModal = ({ project, onClose }) => {
 
 	if (!project) return null;
 
-	const images =
-		project.images && project.images.length
-			? project.images
-			: project.image
-			? [project.image]
-			: [];
+	const images = project.images?.length
+		? project.images
+		: project.image
+		? [project.image]
+		: [];
 
-	// ---------- touch handlers for mobile swipe ----------
-	const handleTouchStart = (e) => {
-		touchStartX.current = e.touches[0].clientX;
-	};
-	const handleTouchMove = (e) => {
-		touchEndX.current = e.touches[0].clientX;
-	};
+	const handleTouchStart = (e) => (touchStartX.current = e.touches[0].clientX);
+	const handleTouchMove = (e) => (touchEndX.current = e.touches[0].clientX);
 	const handleTouchEnd = () => {
 		if (touchStartX.current == null || touchEndX.current == null) return;
 		const diff = touchStartX.current - touchEndX.current;
-		const threshold = 40; // px to consider swipe
-		if (diff > threshold) {
-			// swipe left -> next
-			setIndex((i) => (i + 1) % images.length);
-		} else if (diff < -threshold) {
-			// swipe right -> prev
+		const threshold = 40;
+		if (diff > threshold) setIndex((i) => (i + 1) % images.length);
+		else if (diff < -threshold)
 			setIndex((i) => (i - 1 + images.length) % images.length);
-		}
-		touchStartX.current = null;
-		touchEndX.current = null;
+		touchStartX.current = touchEndX.current = null;
 	};
 
 	return createPortal(
@@ -104,7 +93,6 @@ const ProjectModal = ({ project, onClose }) => {
 
 					<div className='modal-content'>
 						<div className='modal-left'>
-							{/* MOBILE: swipeable carousel (only shows on mobile via CSS + isMobile logic) */}
 							{isMobile ? (
 								<div
 									className='mobile-carousel'
@@ -118,12 +106,10 @@ const ProjectModal = ({ project, onClose }) => {
 											onClick={() =>
 												setIndex((i) => (i - 1 + images.length) % images.length)
 											}
-											aria-hidden={!isMobile}
 										>
 											<FiChevronLeft />
 										</button>
 									)}
-
 									<motion.img
 										key={images[index]}
 										src={images[index]}
@@ -134,18 +120,14 @@ const ProjectModal = ({ project, onClose }) => {
 										transition={{ duration: 0.28 }}
 										loading='lazy'
 									/>
-
 									{images.length > 1 && (
 										<button
 											className='gallery-nav right'
 											onClick={() => setIndex((i) => (i + 1) % images.length)}
-											aria-hidden={!isMobile}
 										>
 											<FiChevronRight />
 										</button>
 									)}
-
-									{/* dots */}
 									{images.length > 1 && (
 										<div className='carousel-dots'>
 											{images.map((_, i) => (
@@ -153,14 +135,12 @@ const ProjectModal = ({ project, onClose }) => {
 													key={i}
 													className={`dot ${i === index ? 'active' : ''}`}
 													onClick={() => setIndex(i)}
-													aria-label={`Show image ${i + 1}`}
 												/>
 											))}
 										</div>
 									)}
 								</div>
 							) : (
-								// DESKTOP: show all images (or whatever layout you prefer)
 								<div className='desktop-images'>
 									{images.map((src, i) => (
 										<img
@@ -180,8 +160,7 @@ const ProjectModal = ({ project, onClose }) => {
 
 							<div className='modal-section'>
 								<h4>About this project</h4>
-								{project.longDescription &&
-								project.longDescription.length > 0 ? (
+								{project.longDescription?.length ? (
 									project.longDescription.map((para, i) => (
 										<p key={i} className='modal-description'>
 											{para}

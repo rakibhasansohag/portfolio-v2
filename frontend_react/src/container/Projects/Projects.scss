@@ -131,11 +131,12 @@
   align-items: center; /* Default for desktop */
   z-index: 1000;
   padding: 2rem;
+  overflow-y: auto;
 
   
   @media (max-width: 900px) {
     align-items: flex-start; /* Align modal to the top */
-    overflow-y: auto;      /* Allow the entire overlay to scroll */
+    // overflow-y: auto;      /* Allow the entire overlay to scroll */
   }
 }
 
@@ -149,7 +150,13 @@
   
   display: flex; 
   flex-direction: column; 
- 
+  max-height: 90vh;
+  overflow-y: auto;
+
+  @media screen and (max-width: 900px) {
+    max-height: 94vh;
+    
+  }
 }
 
 
